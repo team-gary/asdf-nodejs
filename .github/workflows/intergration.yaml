@@ -20,25 +20,27 @@ jobs:
 
     steps:
 
-      - name: setup_asdf
-        uses: asdf-vm/actions/plugin-test@v1.0.0
+      # - name: setup_asdf
+      #   uses: asdf-vm/actions/plugin-test@v1.0.0
 
-      - name: setup_openpgp_team_keyring
-        run: ./bin/import-release-team-keyring
+      # - name: setup_openpgp_team_keyring
+      #   run: ./bin/import-release-team-keyring
 
-      - name: asdf_plugin_test
-        env:
-          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node --version
+      # - name: asdf_plugin_test
+      #   env:
+      #     GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: node --version
 
       # - name: setup_openpgp_team_keyring
       #   uses: asdf-vm/actions/plugin-test@v1.0.0
       #   with:
       #     command: ./bin/import-release-team-keyring
           
-      # - name: asdf_plugin_test
-      #   env:
-      #     GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   uses: asdf-vm/actions/plugin-test@v1.0.0
-      #   with:
-      #     command: node --version
+      - name: asdf_plugin_test
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: asdf-vm/actions/plugin-test@v1.0.0
+        with:
+          command: |
+            ./bin/import-release-team-keyring && \
+            node --version
