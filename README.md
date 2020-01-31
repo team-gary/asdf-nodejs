@@ -1,6 +1,6 @@
-# asdf-nodejs
+![CI](https://github.com/team-gary/asdf-nodejs/workflows/CI/badge.svg)
 
-[![Build Status](https://travis-ci.org/asdf-vm/asdf-nodejs.svg?branch=master)](https://travis-ci.org/asdf-vm/asdf-nodejs)
+# asdf-nodejs
 
 Node.js plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
@@ -24,7 +24,7 @@ Node.js plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 Install the plugin:
 
 ```bash
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin-add nodejs https://github.com/team-gary/asdf-nodejs.git
 ```
 
 Import the Node.js release team's OpenPGP keys to main keyring:
